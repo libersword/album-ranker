@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <form id="form" action="index.handlebars">
+        Artist Name:<br>
+        <input type="text" placeholder="Artist Name" id="artName" required>
+        <br><br>
+        Album Name:<br>
+        <input type="text" placeholder="album" id="album" required>
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <img src="" id="img">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+
+        var form = document.getElementById("form");
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+        
+            var artistName = document.getElementById("artName").value;
+            var album = document.getElementById("album").value;
+
+            var data2 = {
+                artistName: artistName,
+                album: album
+            }
+            console.log(data2);
+
+            $.ajax("/api", {
+                type: "POST",
+                data: data2
+            }).then((response) => {
+                console.log(`added ${response}`)
+                // Reload the page to get the updated list
+                //location.reload()
+            })
+
+
+        });
+
+    </script>
+</body>
+
+</html>

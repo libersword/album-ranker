@@ -1,0 +1,31 @@
+{
+  "name": "album-ranker",
+  "version": "1.0.0",
+  "description": "Add albums throughout the year and it ranks your albums as you go",
+  "main": "frontend.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "handlebars": "^4.5.3",
+    "node-spotify-api": "^1.1.1",
+    "path": "^0.12.7",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/libersword/album-ranker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/libersword/album-ranker/issues"
+  },
+  "homepage": "https://github.com/libersword/album-ranker#readme"
+}
