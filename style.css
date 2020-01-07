@@ -1,0 +1,384 @@
+
+.rating-block {
+    padding: 2px 5px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  
+  .rating-block .ratings-type {
+    margin-right: 1rem;
+    margin-bottom: 0;
+  }
+  
+  .rating-block .rating-block {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .rating-block .rating-block-rating {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  
+  .rating-block .star {
+    cursor: pointer;
+    stroke: #cc4b37;
+  }
+  
+  .rating-block .rating-block-rating .star.selected polygon {
+    fill: #cc4b37;
+  }
+  
+  .rating-block .rating-block-rating.is-voted .star polygon {
+    fill: #cc4b37;
+  }
+  
+  .rating-block .rating-block-rating.is-voted .star.selected ~ .star polygon {
+    fill: transparent;
+  }
+  
+
+ 
+.button-group-option {
+    position: relative;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    margin-bottom: 1rem;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+    -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  
+  .button-group-option::before, .button-group-option::after {
+    display: table;
+    content: ' ';
+    -webkit-flex-basis: 0;
+        -ms-flex-preferred-size: 0;
+            flex-basis: 0;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  
+  .button-group-option::after {
+    clear: both;
+  }
+  
+  .button-group-option .button {
+    margin: 0;
+    margin-right: 1px;
+    margin-bottom: 1px;
+    font-size: 0.9rem;
+    -webkit-flex: 0 0 auto;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+  }
+  
+  .button-group-option .button:last-child {
+    margin-right: 0;
+  }
+  
+  .button-group-option .button {
+    -webkit-flex: 1 1 0px;
+        -ms-flex: 1 1 0px;
+            flex: 1 1 0px;
+  }
+  
+  .button-group-option .button {
+    font-size: 1.125rem;
+  }
+  
+  .button-group-option:before {
+    content: attr(data-grouptype);
+    z-index: 1;
+    color: #8a8a8a;
+    display: inline-block;
+    font-size: 1rem;
+    padding: 0.25em;
+    border-radius: 5000px;
+    background: #fefefe;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  
+  .button-group-option .button + .button {
+    margin-left: 0.35rem;
+  }
+  
+  
+  
+  /* .button.success {
+    background: #fb0101;
+    color: #fff;
+}  */
+
+.button-group.secondary .button {
+    background: rgb(255, 0, 0);
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+.topbar-responsive {
+    background: #000000;
+    padding: 1rem 1.5rem;
+  }
+  
+  .topbar-responsive .topbar-responsive-logo {
+    color: #fefefe;
+    vertical-align: middle;
+  }
+  
+  .topbar-responsive .menu {
+    background: #000000;
+  }
+  
+  .topbar-responsive .menu li:last-of-type {
+    margin-right: 0;
+  }
+  
+  .topbar-responsive .menu a {
+    color: #fefefe;
+    transition: color 0.15s ease-in;
+  }
+  
+  .topbar-responsive .menu a:hover {
+    color: #c6d1d8;
+  }
+  
+  @media screen and (max-width: 39.9375em) {
+    .topbar-responsive .menu a {
+      padding: 0.875rem 0;
+    }
+  }
+  
+  .topbar-responsive .menu .topbar-responsive-button {
+    color: #fefefe;
+    border-color: #fefefe;
+    border-radius: 5000px;
+    transition: color 0.15s ease-in, border-color 0.15s ease-in;
+  }
+  
+  .topbar-responsive .menu .topbar-responsive-button:hover {
+    color: #c6d1d8;
+    border-color: #c6d1d8;
+  }
+  
+  @media screen and (max-width: 39.9375em) {
+    .topbar-responsive .menu .topbar-responsive-button {
+      width: 100%;
+      margin: 0.875rem 0;
+    }
+  }
+  
+  @media screen and (max-width: 39.9375em) {
+    .topbar-responsive {
+      padding: 0.75rem;
+    }
+    .topbar-responsive .top-bar-title {
+      position: relative;
+      width: 100%;
+    }
+    .topbar-responsive .top-bar-title span {
+      position: absolute;
+      right: 0;
+      border: 1px solid #fefefe;
+      border-radius: 5px;
+      padding: 0.25rem 0.45rem;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+              transform: translateY(-50%);
+    }
+    .topbar-responsive .top-bar-title span .menu-icon {
+      margin-bottom: 4px;
+    }
+  }
+  
+  @-webkit-keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @-webkit-keyframes slideDown {
+    0% {
+      -webkit-transform: translateY(-100%);
+              transform: translateY(-100%);
+    }
+    100% {
+      -webkit-transform: translateY(0%);
+              transform: translateY(0%);
+    }
+  }
+  
+  @keyframes slideDown {
+    0% {
+      -webkit-transform: translateY(-100%);
+              transform: translateY(-100%);
+    }
+    100% {
+      -webkit-transform: translateY(0%);
+              transform: translateY(0%);
+    }
+  }
+  
+  @media screen and (max-width: 39.9375em) {
+    .topbar-responsive-links {
+      -webkit-animation-fill-mode: both;
+              animation-fill-mode: both;
+      -webkit-animation-duration: 0.5s;
+              animation-duration: 0.5s;
+      width: 100%;
+      -webkit-animation: fadeIn 1s ease-in;
+              animation: fadeIn 1s ease-in;
+    }
+  }
+  
+
+.menu-fancy li {
+    position: relative;
+    margin: 0 5px;
+  }
+  
+  .menu-fancy li a {
+    padding: 0.5rem 0;
+    color: #8a8a8a;
+  }
+  
+  .menu-fancy li:after,
+  .menu-fancy li:before,
+  .menu-fancy a:before,
+  .menu-fancy a:after {
+    position: absolute;
+    content: '';
+    border-radius: 4px;
+  }
+  
+  .menu-fancy li:after,
+  .menu-fancy li:before {
+    bottom: -4px;
+    height: 4px;
+  }
+  
+  .menu-fancy li:not(.is-selected):before {
+    left: 0;
+    right: -2px;
+  }
+  
+  .menu-fancy li.is-selected:after {
+    left: 0;
+    right: 39px;
+  }
+  
+  .menu-fancy li.is-selected:before {
+    right: -2px;
+    width: 13px;
+  }
+  
+  .menu-fancy .is-selected a:before {
+    height: 22px;
+    width: 4px;
+    bottom: -22px;
+    right: 7px;
+  }
+  
+  .menu-fancy .is-selected a:after {
+    height: 4px;
+    width: 40px;
+    bottom: -13px;
+    right: 5px;
+    -webkit-transform: rotate(30deg);
+        -ms-transform: rotate(30deg);
+            transform: rotate(30deg);
+  }
+  
+  .menu-fancy .menu-fancy-option1 a:hover {
+    color: #3adb76;
+  }
+  
+  .menu-fancy .menu-fancy-option1:after,
+  .menu-fancy .menu-fancy-option1:before,
+  .menu-fancy .menu-fancy-option1 a:after,
+  .menu-fancy .menu-fancy-option1 a:before {
+    background-color: #3adb76;
+  }
+  
+  .menu-fancy .menu-fancy-option2 a:hover {
+    color: #cc4b37;
+  }
+  
+  .menu-fancy .menu-fancy-option2:after,
+  .menu-fancy .menu-fancy-option2:before,
+  .menu-fancy .menu-fancy-option2 a:after,
+  .menu-fancy .menu-fancy-option2 a:before {
+    background-color: #cc4b37;
+  }
+  
+  .menu-fancy .menu-fancy-option3 a:hover {
+    color: #1779ba;
+  }
+  
+  .menu-fancy .menu-fancy-option3:after,
+  .menu-fancy .menu-fancy-option3:before,
+  .menu-fancy .menu-fancy-option3 a:after,
+  .menu-fancy .menu-fancy-option3 a:before {
+    background-color: #1779ba;
+  }
+  
+  .menu-fancy .menu-fancy-option4 a:hover {
+    color: #ffae00;
+  }
+  
+  .menu-fancy .menu-fancy-option4:after,
+  .menu-fancy .menu-fancy-option4:before,
+  .menu-fancy .menu-fancy-option4 a:after,
+  .menu-fancy .menu-fancy-option4 a:before {
+    background-color: #ffae00;
+  }
+  
+  
+  
