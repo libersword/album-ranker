@@ -51,45 +51,4 @@ app.post("/api", function (req, res) {
       }
     }
   });
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        // console.log("data.albums.items[i]", data.albums.items[i]);
-        // console.log("Album Name: ", data.albums.items[i].name);
-        // console.log("Artist Name: ", data.albums.items[i].artists[0].name);
-        // console.log("Artwork: ", data.albums.items[i].images[0].url);
-        // console.log("Album ID: ", data.albums.items[i].id);
-        // console.log("Number of tracks ", data.albums.items[i].total_tracks);
-        // console.log("Album Year: ", data.albums.items[i].release_date);
-
-  // spotify.request("https://api.spotify.com/v1/albums/" + id + "/tracks")
-    //   .then(function (data) {
-    //     let filteredData = data.map(items => {
-    //       // only get data you need here. 
-    //      })
-
-    //     // narrow down data response with only data needed for the front end
-    //     albumData.tracks = filteredData // this is an array of narrowed down data from the response
-
-    //     res.status(200);
-    //     res.json(albumData)
-
-
-    //   })
-    //   .catch(function (err) {
-    //     console.error('Error occurred: ' + err);
-    //   });
+});
