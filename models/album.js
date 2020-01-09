@@ -1,9 +1,12 @@
 module.exports = function(sequalize, DataTypes){
   var Album = sequalize.define("Album", {
-    albumName: DataTypes.STRING,
     artistName: DataTypes.STRING,
-    spotifyLink: DataTypes.STRING,
+    albumName: DataTypes.STRING,
     overallRating: DataTypes.INTEGER,
+    dynamicRating: DataTypes.INTEGER,
+    uniqueRating: DataTypes.INTEGER,
+    productionRating: DataTypes.INTEGER,
+    musicianshipRating: DataTypes.INTEGER,
     dynamic: DataTypes.FLOAT,
     unique: DataTypes.FLOAT,
     production: DataTypes.FLOAT,

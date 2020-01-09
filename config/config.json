@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "root",
+    "password": "Cance164",
     "database": "album_ranker",
     "host": "127.0.0.1",
     "dialect": "mysql",
