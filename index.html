@@ -20,7 +20,7 @@
         <br><br>
         <button type="submit">Submit</button>
     </form>
-
+    <br><br>
     <img src="" id="img">
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -45,9 +45,10 @@
                 type: "POST",
                 data: data2
             }).then((response) => {
-                console.log(`added ${response}`)
-                // Reload the page to get the updated list
-                //location.reload()
+                console.log(response)
+                console.log(response.images[0].url);
+                $("#img").attr("src", response.images[0].url);
+              
             })
 
 

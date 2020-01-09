@@ -1,7 +1,7 @@
 var form = document.getElementById("form");
 form.addEventListener("submit", function(e){
     e.preventDefault();
-    console.log("it works!!!!!!");
+  
     var artistName = document.getElementById("artName").value;
     var album = document.getElementById("album").value;
 
@@ -14,13 +14,17 @@ form.addEventListener("submit", function(e){
         type: "POST",
         data: data
     }).then((response) => {
-        console.log(`added ${response}`)
+        console.log(typeof response)
+//loop through the response and create variables for all the info you need here
+
         // Reload the page to get the updated list
         location.reload()
     })
 
 
 });
+
+
 
 
 
