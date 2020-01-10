@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pigeonhole</title>
     <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
-    <link href="style.css" rel="stylesheet" />
+    <link href="./assets/css/style.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -62,14 +64,14 @@
                     <div class="grid-x grid-padding-x">
                         <div class="medium-12 cell">
                             <label>Artist Name
-                                <input type="text" placeholder="Search Artist Name">
+                                <input type="text" placeholder="Search Artist Name" id="artName">
                             </label>
                         </div>
                         <div class="medium-12 cell">
                             <label>Album Name
-                                <input type="text" placeholder="Search Album Title">
+                                <input type="text" placeholder="Search Album Title" id="album">
                             </label>
-                            <a class="button expanded alert" href="google.com">Search</a>
+                            <a class="button expanded alert" onclick="api()">Search</a>
 
                         </div>
                     </div>
@@ -406,7 +408,7 @@
 
     <div class="row">
         <div class="medium-6 columns">
-            <img class="thumbnail" src="./images/placeholder-750x750.jpg">
+            <img class="thumbnail" src="./images/placeholder-750x750.jpg" id="img">
             <div class="row small-up-4">
             </div>
 
@@ -457,9 +459,40 @@
             <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
             <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
             <script src="./script.js"></script>
-            <script>
-                $(document).foundation();
-            </script>
+
+            <script type="text/javascript">
+
+            $(document).foundation();
+               
+            function api(){
+                    console.log("working!!!!!!")
+                    var artistName = document.getElementById("artName").value;
+                    var album = document.getElementById("album").value;
+
+                    var data2 = {
+                        artistName: artistName,
+                        album: album
+                    }
+                    console.log(data2);
+
+                            $.ajax("/api", {
+                                type: "POST",
+                                data: data2
+                            }).then((response) => {
+                                console.log(response)
+                                //setting image source
+                                $("#img").attr("src", response.images[0].url);
+
+                                $("#albumName").text(response.name);
+                                $("#albumYear").text(response.release_date);
+                                $("#numTracks").text(response.total_tracks);
+                            
+                            })
+        };
+
+    </script>
+
+            
 </body>
 
 </html>
