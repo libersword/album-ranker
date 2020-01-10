@@ -9,33 +9,41 @@
 </head>
 <body>
 
-  <nav class="top-bar topbar-responsive">
+  <!-- Start Top Bar -->
+  <nav class="top-bar topbar-responsive top">
     <div class="top-bar-title">
       <span data-responsive-toggle="topbar-responsive" data-hide-for="medium">
         <button class="menu-icon" type="button" data-toggle></button>
       </span>
-      <img class="icon" src="./banner.png" style="width: 300px; height: 120px;">
-    </div>
-  
-    <!-- <div id="topbar-responsive" class="topbar-responsive-links">
-      <div class="top-bar-right">
+    <div id="topbar-responsive" class="topbar-responsive-links">
+      <div class="top-bar-left">
         <ul class="menu simple vertical medium-horizontal">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li> -->
-          <!-- <li><a href="#">Services</a></li>
-          <li><a href="#">Works</a></li>
-          <li><a href="#">News</a></li> -->
-          <!-- <li><a href="#">Contact</a></li>
+          <li><img class="icon" src="./banner.png" style="width: 180px;"></li>
+
+        
           <li>
-            <button type="button" class="button hollow topbar-responsive-button">Categories</button>
+          
           </li>
         </ul>
       </div>
-    </div> -->
+
+      <div class="top-bar-right">
+        <ul class="menu simple vertical medium-horizontal">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Github Repo</a></li>
+        
+          <li>
+            <button type="button" class="button hollow topbar-responsive-button">
+              <a href="./rank.html">Rank New Album</a></button>
+          </li>
+        </ul>
+      </div>
+      </div>
+    </div>
   </nav>
-  <!-- End Top Bar --> 
-  
-<br>
+  <!-- End Top Bar -->
+  <br>
 
 <div class="row columns">
 <nav aria-label="You are here:" role="navigation">
@@ -427,7 +435,49 @@ My Review
 
 </div>
 
-<footer>Made with lots of <img class="icon" src="heart.png"> </footer>
+<footer class="responsive-blog-footer" style="background-color: black;">
+  <div class="row">
+    <div class="medium-8 columns small-order-2 medium-order-1 about-container">
+      <div class="row">
+        <!-- <div class="hide-for-small-only medium-4 columns about-section">
+          <img src="https://placehold.it/250x250">
+        </div> -->
+        <div class="medium-12 columns about-section">
+          <h4> About Us</h4>
+          <p>This is what happes when a group of software developing music snobs get together 
+          and we are not at all sorry about it.</p>
+          
+        </div>
+      </div>
+    </div>
+    <div class="small-12 medium-4 columns small-order-1 medium-order-2 mailing-container">
+      <h4 class="mailing-list">Join our mailing list for updates!</h4>
+      <input type="text" placeholder="Email Address">
+      <a class="button expanded subscribe-button" href="#">Subscribe Now! ( you know you love us )</a>
+      
+    </div>
+  </div>
+  <!-- <div class="row tag-search">
+    <div class="columns">
+      <h4>Search by Tag</h4>
+      <ul class="menu simple tag-section">
+        <li><a href="">word</a></li>
+        <li><a href="">word</a></li>
+        <li><a href="">word</a></li>
+        <li><a href="">word</a></li>
+        <li><a href="">word</a></li>
+        <li><a href="">word</a></li>
+        <li><a href="">word</a></li>
+      </ul>
+    </div>
+  </div> -->
+  <div class="row columns flex-container align-justify">
+    <a href="#top"><i class="fa fa-chevron-circle-up" aria-hidden="true"></i></a>
+    <div>
+    <p style="float: right;"> &copy; Pigeonhole all rights reserved Made with <i class="fa fa-xs fa-heart" style="color:red "></i></p>
+  </div>
+  </div>
+</footer>
 
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>

@@ -1,6 +1,20 @@
 
 @charset "UTF-8";
 
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  color: rgb(255, 0, 0);
+
+}
+
+a:visited { color: rgb(255, 0, 0); }
+
+
+
+
 .testimonial-slider-container {
   background: #e6e6e6;
   padding: 1rem 1rem;
@@ -119,15 +133,15 @@
   
   .rating-block .star {
     cursor: pointer;
-    stroke: #cc4b37;
+    stroke: rgb(255, 0, 0);
   }
   
   .rating-block .rating-block-rating .star.selected polygon {
-    fill: #cc4b37;
+    fill: rgb(255, 0, 0);
   }
   
   .rating-block .rating-block-rating.is-voted .star polygon {
-    fill: #cc4b37;
+    fill: rgb(255, 0, 0);
   }
   
   .rating-block .rating-block-rating.is-voted .star.selected ~ .star polygon {
@@ -614,4 +628,75 @@
     width: 25px;
   }
   
-  
+  /* search button on Rank page */
+  .button.alert {
+    background: rgb(255, 0, 0);
+  }
+
+  /* Footer */
+
+.responsive-blog-footer {
+  background: #4a4a4a;
+  padding-top: 2rem;
+  color: white;
+}
+
+@media screen and (max-width: 39.9375em) {
+  .responsive-blog-footer h4 {
+    font-size: 1.5rem;
+  }
+}
+
+.responsive-blog-footer p {
+  color: #8a8a8a;
+}
+
+.responsive-blog-footer .mailing-list {
+  margin-bottom: 1.5rem;
+}
+
+.responsive-blog-footer .mailing-container {
+  margin-bottom: 2rem;
+}
+
+.responsive-blog-footer .about-section, .responsive-blog-footer .tag-section {
+  margin-bottom: 2rem;
+}
+
+.responsive-blog-footer .about-section a, .responsive-blog-footer .tag-section a {
+  color: #1779ba;
+}
+
+.responsive-blog-footer .subscribe-button {
+  background-color: rgb(255, 0, 0);
+  color: white;
+  text-align: center;
+  margin: 4px 2px;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.responsive-blog-footer .subscribe-button:hover {
+  background-color: pink;
+  /* opacity: 0.6; */
+  color: black;
+}
+
+.responsive-blog-footer .fa-chevron-circle-up {
+  font-size: 3rem;
+  color: #8a8a8a;
+}
+
+.responsive-blog-footer .fa-chevron-circle-up:hover {
+  color: #b0b0b0;
+  transition: color 0.3s ease-in;
+
+}
+
+.responsive-blog-footer a:visited  {
+color: white;
+}
+
+.responsive-blog-footer a {
+font-weight: bold;
+}
