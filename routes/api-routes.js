@@ -1,31 +1,48 @@
+
+var db = require("../models");
+
 module.exports = function(app) {
 
-  // GET route for getting all of the todos
   app.get("/api/albums", function(req, res) {
-    album.getAlbum(function(results) {
-      res.json(results);
+    var query = {};
+    if (req.query.id) {
+      query.AlbumId = req.query.id;
+    }
+    db.Album.findAll({
+      include: [db.Album],
+      where: query
+    }).then(function(dbAlbum) {
+      res.json(dbAlbum);
     });
   });
 
-  // POST route for saving a new todo. We can create a todo using the data on req.body
+  app.get("/api/albums/:id", function(req, res) {
+    db.Album.findOne({
+      include: [db.Album],
+      where: {
+        id: req.params.id
+      }
+    }).then(function(dbAlbum) {
+      console.log(dbAlbum);
+      res.json(dbAlbum);
+    });
+  });
+
   app.post("/api/albums", function(req, res) {
-    album.addAlbum(req.body, function(results) {
-      res.json(results);
+    db.Album.create(req.body).then(function(dbAlbum) {
+      res.json(dbAlbum);
     });
   });
 
-  // DELETE route for deleting todos. We can access the ID of the todo to delete in
-  // req.params.id
-  app.delete("/api/albums/:id", function(req, res) {
-    album.deleteAlbum(req.params.id, function(results) {
-      res.json(results);
-    });
-  });
-
-  // PUT route for updating todos. We can access the updated todo in req.body
   app.put("/api/albums", function(req, res) {
-    album.editAlbum(req.body, function(results) {
-      res.json(results);
+    db.Album.update(
+      req.body,
+      {
+        where: {
+          id: req.body.id
+        }
+      }).then(function(dbAlbum) {
+      res.json(dbAlbum);
     });
   });
 };

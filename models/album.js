@@ -1,7 +1,13 @@
-module.exports = function(sequalize, DataTypes){
-  var Album = sequalize.define("Album", {
-    artistName: DataTypes.STRING,
-    albumName: DataTypes.STRING,
+module.exports = function(sequelize, DataTypes) {
+  var Album = sequelize.define("Album", {
+    artistName: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    albumName: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
     overallRating: DataTypes.INTEGER,
     dynamicRating: DataTypes.INTEGER,
     uniqueRating: DataTypes.INTEGER,
@@ -11,7 +17,17 @@ module.exports = function(sequalize, DataTypes){
     unique: DataTypes.FLOAT,
     production: DataTypes.FLOAT,
     musicianship: DataTypes.FLOAT,
-    totalScore: DataTypes.INTEGER
+    totalScore: DataTypes.INTEGER,
+    notes: DataTypes.TEXT,
+    createdAt: {
+      type: DataTypes.DATE,
+      allowNull: false
+    },
+    updatedAt: {
+      type: DataTypes.DATE,
+      allowNull: false
+    }
   })
+
   return Album;
-}
+};
