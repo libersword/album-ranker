@@ -30,10 +30,10 @@ $(document).ready(function() {
       let uImportance = uI.val();
       let pImportance = pI.val();
       let mImportance = mI.val();
-      let notes = notes.val();
+      let albumNotes = notes.val();
       let totalScore = 0;
 
-      console.log(artist.toLowerCase(), album.toLowerCase(), overall, dynamics, unique, production, musicianship, dImportance, uImportance, pImportance, mImportance);
+      console.log(artist.toLowerCase(), album.toLowerCase(), overall, dynamics, unique, production, musicianship, dImportance, uImportance, pImportance, mImportance, albumNotes);
     
       const metaRankingsGiven = [dynamics, unique, production, musicianship];
   
@@ -79,7 +79,7 @@ $(document).ready(function() {
       production: individualRanking[2],
       musicianship: individualRanking[3],
       totalScore: totalScore,
-      notes: notes,
+      notes: albumNotes,
     };
     console.log(newAlbum)
     submitAlbum(newAlbum);
