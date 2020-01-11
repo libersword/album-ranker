@@ -1,7 +1,8 @@
-{
+require('dotenv').config()
+module.exports = {
   "development": {
     "username": "root",
-    "password": "Cance164",
+    "password": process.env.PASS,
     "database": "album_ranker",
     "host": "127.0.0.1",
     "port": 3306,
@@ -16,11 +17,7 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "port": 3306,
-    "dialect": "mysql"
+    "use_env_variable" : "JAWSDB_URL",
+    "dialect":"mysql"
   }
 }

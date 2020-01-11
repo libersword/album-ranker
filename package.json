@@ -19,6 +19,7 @@
   "homepage": "https://github.com/libersword/album-ranker#readme",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mysql2": "^2.1.0",
     "node-spotify-api": "^1.1.1",
