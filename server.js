@@ -1,35 +1,20 @@
-
 var express = require("express");
 var Spotify = require('node-spotify-api');
 var path = require("path");
 var cors = require("cors");
-
-//middleware
 var app = express();
-app.use(cors());
-app.use(express.json());
+
+var db = require("./models");
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 app.use(express.static("public"));
 //server
-var PORT = process.env.PORT || 4000;
-app.listen(PORT, function () {
-console.log("listening on " + PORT);
-});
+var PORT = process.env.PORT || 8080;
 
-//initial frontend HTML
-app.get("*", function (req, res) {
-  res.sendFile(path.join(__dirname, ""));
-});
-//initial frontend HTML
-app.get("/rank", function (req, res) {
-  res.sendFile(path.join(__dirname, "./public/rank.html"));
-});
 
 app.post("/api", function (req, res) {
   const artistName = req.body.artistName;
   const album = req.body.album;
-  console.log(artistName);
-  console.log(album);
 
   var spotify = new Spotify({
     id: '3b6b2f5b8750435aa00914af973df039',
@@ -53,5 +38,14 @@ app.post("/api", function (req, res) {
 
       }
     }
+  });
+});
+
+require("./routes/html-routes.js")(app);
+require("./routes/api-routes.js")(app);
+
+db.sequelize.sync({ force: true }).then(function() {
+  app.listen(PORT, function() {
+    console.log("App listening on PORT " + PORT);
   });
 });

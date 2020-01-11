@@ -13,8 +13,6 @@ a {
 a:visited { color: rgb(255, 0, 0); }
 
 
-
-
 .testimonial-slider-container {
   background: #e6e6e6;
   padding: 1rem 1rem;
@@ -771,3 +769,61 @@ font-weight: bold;
   padding: 1rem;
 }
 
+/*LINDSEYS ADDITIONS*/
+.album-container {
+  margin: 0 20px 0 20px;
+}
+
+.album-table{
+  width: 100%;
+  overflow-x: auto;
+}
+
+@media only screen and (max-width: 750px) {
+  #album-table table,
+  #album-table thead,
+  #album-table tbody,
+  #album-table th,
+  #album-table td,
+  #album-table tr {
+      display: block;
+  }
+  #album-table thead tr {
+      display: none;
+      
+  }
+
+  #album-table tr {
+   border: 1px solid #ccc;
+    }
+
+
+  #album-table td {
+      border: none;
+      border-bottom: 1px solid #B6B6B6;
+      position: relative;
+      white-space: normal;
+      text-align:left;
+  }
+
+}
+
+#album-table th:hover{
+  cursor:pointer;
+ background:#AAA;
+}
+
+.homepageBtn {
+  color: red!important;
+  border: 2px red solid!important;
+}
+
+.homepageBtn .secondary {
+  color: black!important;
+  border:2px black solid!important;
+}
+
+.twoButtons {
+margin: 0 auto;
+text-align: center;
+}
