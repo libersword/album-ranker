@@ -3,7 +3,7 @@ var Spotify = require('node-spotify-api');
 var path = require("path");
 var cors = require("cors");
 var app = express();
-
+require('dotenv').config();
 var db = require("./models");
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
