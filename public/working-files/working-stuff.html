@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Album</title>
+  <!-- Latest compiled and minified CSS & JS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/flatly/bootstrap.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <form id="albumSubmit">
+          <div class="form-group">
+            <label for="artistName">Artist:</label>
+            <input placeholder="Artist Name" type="text" class="form-control" id="artist">
+            <br />
+            <label for="albumName">Album:</label>
+            <input placeholder="Album Name: " class="form-control" id="album"></input>
+            <label for="overall">How do you rate the album overall:</label>
+            <input placeholder="Overall Rating" class="form-control" type="number" min='1' max = '5' id="overall">
+          
+            
+            </input>
+            <label for="dynamicsRating">How do you rate the dynamics:</label>
+            <input placeholder="Dynamic Rating" class="form-control" type="number" min='1' max = '5' id="dynamicRating"></input>
+            <div class="form-group">
+              <label for="dynamics">How important is dynamics:</label>
+              <select class="custom-select" id="dynamic">
+                <option value="most">Most Important</option>
+                <option value="very">Very Important</option>
+                <option value="somewhat">Somewhat</option>
+                <option value="least">Least Important</option>
+              </select>
+            </div>
+            <label for="uniqueRating">How do you rate the uniqueness:</label>
+            <input placeholder="Uniqueness Rating" class="form-control" type="number" min='1' max = '5' id="uniqueRating"></input>
+            <div class="form-group">
+              <label for="unique">How important is uniqueness:</label>
+              <select class="custom-select" id="unique">
+                <option value="most">Most Important</option>
+                <option value="very">Very Important</option>
+                <option value="somewhat">Somewhat</option>
+                <option value="least">Least Important</option>
+              </select>
+            </div>
+            <label for="productionRating">How do you rate the production:</label>
+            <input placeholder="Production Rating" class="form-control" type="number" min='1' max = '5' id="productionRating"></input>
+            <div class="form-group">
+              <label for="production">How important is production:</label>
+              <select class="custom-select" id="production">
+                <option value="most">Most Important</option>
+                <option value="very">Very Important</option>
+                <option value="somewhat">Somewhat</option>
+                <option value="least">Least Important</option>
+              </select>
+            </div>
+            <label for="musicianshipRating">How do you rate the musicianship:</label>
+            <input placeholder="Musicianship Rating" class="form-control" type="number" min='1' max = '5' id="musicianshipRating"></input>
+            <div class="form-group">
+              <label for="musicianship">How important is musicianship:</label>
+              <select class="custom-select" id="musicianship">
+                <option value="most">Most Important</option>
+                <option value="very">Very Important</option>
+                <option value="somewhat">Somewhat</option>
+                <option value="least">Least Important</option>
+              </select>
+            </div>
+            <label for="notes">Notes</label>
+            <textarea id="notes"></textarea>
+            <br />
+            <button type="submit" class="btn btn-success submit">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- Custom Script -->
+  <script src="js/album-input.js" type="text/javascript"></script>
+
+</body>
+
+</html>

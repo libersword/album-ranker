@@ -1,0 +1,232 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pigeonhole - Rank New Album</title>
+    <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="./assets/css/style.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <!-- Start Top Bar -->
+    <nav class="top-bar topbar-responsive top">
+        <div class="top-bar-title">
+            <span data-responsive-toggle="topbar-responsive" data-hide-for="medium">
+                <button class="menu-icon" type="button" data-toggle></button>
+            </span>
+            <div id="topbar-responsive" class="topbar-responsive-links">
+                <div class="top-bar-left">
+                    <ul class="menu simple vertical medium-horizontal">
+                        <li><img class="icon" src="./assets/images/banner.png" style="width: 180px;"></li>
+                        <li>
+
+                        </li>
+                    </ul>
+                </div>
+                <!-- Nav Links -->
+                <div class="top-bar-right">
+                    <ul class="menu simple vertical medium-horizontal">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="https://github.com/libersword/album-ranker" target=”_blank”>Github Repo</a></li>
+                        <li>
+                        <li><a href="/profile">My Albums</a></li>
+                        <li>
+                        <li>
+                            <button type="button" class="hollow button alert topbar-responsive-button">
+                                <a href="/rank" style="margin-left: 2px; margin-right: 2px;">Rank New
+                                    Album</a></button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- End Top Bar -->
+    <br>
+
+    <br>
+
+    <div class="row columns">
+        <nav aria-label="You are here:" role="navigation">
+        </nav>
+    </div>
+
+    </div>
+    </div>
+    <div class="row medium-12 columns">
+    <!--Album/Artist Search Input -->
+    <div class="medium-6 columns">
+        <div class="search">
+    <form id="albumSubmit">
+    <div class="medium-12">
+    
+        <label>Artist Name
+            <input type="text" placeholder="Search Artist Name" id="artist">
+        </label>
+        <label>Album Name
+            <input type="text" placeholder="Search Album Title" id="album">
+        </label>
+        <button class="button expanded alert" id="spotify-api">Search</button>
+            
+        </div>
+            
+        
+        <div class="small secondary expanded button-group">
+            <div class="card rating">
+                <div class="card-section">
+                    <p class="ratings-card-header" style="text-align: center;">
+                        <h4 style="text-align: center;">
+                            Rate the Album
+                        </h4>
+                    </p>
+
+                    
+                        <label for="overall">Rate the album overall</label>
+                        <input placeholder="Overall Rating" class="form-control" type="number" min='1' max='5'
+                            id="overall"></input>
+    
+
+                    <!-- DYNAMICS -->
+                    <label for="dynamicsRating">How do you rate the dynamics:</label>
+                    <input placeholder="Dynamic Rating" class="form-control" type="number" min='1' max='5'
+                        id="dynamicRating"></input>
+                    <div class="form-group">
+                        <label for="dynamics">How important is dynamics:</label>
+                        <select class="custom-select" id="dynamic">
+                            <option value="most">Most Important</option>
+                            <option value="very">Very Important</option>ƒ
+                            <option value="somewhat">Somewhat</option>
+                            <option value="least">Least Important</option>
+                        </select>
+                    </div>
+
+                    <!-- Uniqueness -->
+                    <label for="uniqueRating">How do you rate the uniqueness:</label>
+            <input placeholder="Uniqueness Rating" class="form-control" type="number" min='1' max = '5' id="uniqueRating"></input>
+            <div class="form-group">
+              <label for="unique">How important is uniqueness:</label>
+              <select class="custom-select" id="unique">
+                <option value="most">Most Important</option>
+                <option value="very">Very Important</option>
+                <option value="somewhat">Somewhat</option>
+                <option value="least">Least Important</option>
+              </select>
+            </div>
+                    <!-- Production -->
+                    <label for="productionRating">How do you rate the production:</label>
+                    <input placeholder="Production Rating" class="form-control" type="number" min='1' max = '5' id="productionRating"></input>
+                    <div class="form-group">
+                      <label for="production">How important is production:</label>
+                      <select class="custom-select" id="production">
+                        <option value="most">Most Important</option>
+                        <option value="very">Very Important</option>
+                        <option value="somewhat">Somewhat</option>
+                        <option value="least">Least Important</option>
+                      </select>
+                    </div>
+
+                    <!-- MUSICIANSHIP -->
+                    <label for="musicianshipRating">How do you rate the musicianship:</label>
+                    <input placeholder="Musicianship Rating" class="form-control" type="number" min='1' max = '5' id="musicianshipRating"></input>
+                    <div class="form-group">
+                      <label for="musicianship">How important is musicianship:</label>
+                      <select class="custom-select" id="musicianship">
+                        <option value="most">Most Important</option>
+                        <option value="very">Very Important</option>
+                        <option value="somewhat">Somewhat</option>
+                        <option value="least">Least Important</option>
+                      </select>
+                    </div>
+                    <label for="notes">Notes</label>
+                    <textarea id="notes"></textarea>
+                    <br />
+                    <button type="submit" class="btn btn-success submit">Submit</button>
+                  </div>
+                </div>
+            <br>
+
+            <div class="search">
+                <form>
+                    <div class="grid-container">
+                        <div class="grid-x grid-padding-x">
+                            <div class="medium-12 cell">
+                                <!-- <div class="submit-btn"> -->
+                                <button class="button expanded alert">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </form>
+            </div>
+            </div>
+
+        <div class="medium-6 columns">
+            <img class="thumbnail" src="http://placekitten.com/750/750" id="img">
+            <div class="row small-up-4">
+            </div>
+
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="responsive-blog-footer" style="background-color: black;">
+        <div class="row">
+            <div class="medium-8 columns small-order-2 medium-order-1 about-container">
+                <div class="row">
+                    <div class="medium-12 columns about-section">
+                        <h4> About Us</h4>
+                        <p>This is what happes when a group of software developing music snobs get together
+                            and we are not at all sorry about it.</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mailing List Form -->
+            <div class="small-12 medium-4 columns small-order-1 medium-order-2 mailing-container">
+                <form action="https://formspree.io/xnqpqjzk" method="POST">
+                    <label>
+                        <h4 class="mailing-list" style="color: white;font-weight: bold;">Join our mailing list for
+                            updates!</h4>
+                        <input type="text" name="_replyto" placeholder="Email Address">
+                    </label>
+                    <button type="submit" class="button expanded subscribe-button">Subscribe Now! (you know you love us
+                        )</button>
+                </form>
+            </div>
+            <!-- Mailing List Form End -->
+        </div>
+        <!-- Scroll Up & Copyright -->
+        <div class="row columns flex-container align-justify">
+            <a href="#top"><i class="fa fa-chevron-circle-up" aria-hidden="true"></i></a>
+            <div>
+                <p style="float: right;"> &copy; Pigeonhole all rights reserved Made with <i class="fa fa-xs fa-heart"
+                        style="color:red "></i></p>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+    <!-- LINDSEYS SCRIPT -->
+     <!-- Custom Script -->
+ 
+    <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+    <!-- Custom Script file with minimal  -->
+    <script src="./assets/js/script.js"></script>
+
+   
+ <script src="./assets/js/album-input.js" type="text/javascript"></script>
+
+</body>
+
+</html>

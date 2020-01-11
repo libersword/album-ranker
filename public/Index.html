@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pigeonhole - Home</title>
+
+  <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+
+  <!-- font awesome link -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Custon Css Link -->
+  <link href="./assets/css/style.css" rel="stylesheet"/>
+
+  <!-- in head tag but after foundation.css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/motion-ui@1.2.3/dist/motion-ui.min.css" />
+
+  </head>
+  <body>
+
+    <!-- Start Top Bar -->
+    <nav class="top-bar topbar-responsive top">
+      <div class="top-bar-title">
+        <span data-responsive-toggle="topbar-responsive" data-hide-for="medium">
+          <button class="menu-icon" type="button" data-toggle></button>
+        </span>
+      <div id="topbar-responsive" class="topbar-responsive-links">
+        <div class="top-bar-left">
+          <ul class="menu simple vertical medium-horizontal">
+            <li><img class="icon" src="./assets/images/banner.png" style="width: 180px;"></li>
+            <li>
+            </li>
+          </ul>
+        </div>
+
+<!-- Nav Links -->
+        <div class="top-bar-right">
+          <ul class="menu simple vertical medium-horizontal">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="https://github.com/libersword/album-ranker" target=”_blank”>Github Repo</a></li>
+            <li>
+              <li><a href="/profile">My Albums</a></li>
+              <li>
+              <button type="button" class="hollow button alert topbar-responsive-button">
+                <a href="/rank" style="margin-left: 2px; margin-right: 2px;">Rank New Album</a></button>
+            </li>
+          </ul>
+        </div>
+        </div>
+      </div>
+    </nav>
+    <!-- End Top Bar -->
+    <br>
+
+<!-- HERO Main -->
+    <div class="orbit" role="region" aria-label="Favorite Space Pictures">
+      <ul class="container">
+        <li class="orbit-slide is-active">
+          <img src="./assets/images/Your Music your way!.png" style="border: black; border-style: solid;border-width: 2px;">
+        </li>
+      </ul>
+    </div>
+        <!-- HERO end -->
+    <hr>
+    <div class="twoButtons">
+    <a href='/rank' class="hollow button homepageBtn">Add New Album</a>
+    <a href='/profile' class="hollow button homepageBtn secondary">View Your Albums</a>
+  </div>
+    <!-- <div class="row column text-center">
+      <h2 style="font-weight: bold;">Your Ranked Albums</h2> 
+    </div> -->
+
+    <!-- Previous Listened & Listed from DB -->
+    <!-- <div class="ecommerce-product-slider orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
+      <ul class="orbit-container">
+        <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
+        <button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
+        <li class="is-active orbit-slide">
+          <div class="row small-up-2 medium-up-4 large-up-5 align-center">
+            <div class="column">
+              <div class="product-card">
+                <div class="product-card-thumbnail">
+                  <a href="#"><img src="https://placehold.it/180x180"/></a>
+                </div>
+                <h2 class="product-card-title">Album Name:</h2>
+                <span class="product-card-desc">Band Name:</span>
+                <span class="product-card-price">Your Rating:</span>
+              </div>
+            </div>
+            <div class="column">
+              <div class="product-card">
+                <div class="product-card-thumbnail">
+                  <a href="#"><img src="https://placehold.it/180x180"/></a>
+                </div>
+                <h2 class="product-card-title">Album Name:</h2>
+                <span class="product-card-desc">Band Name:</span>
+                <span class="product-card-price">Your Rating:</span>             
+              </div>
+            </div>
+            <div class="column hide-for-small-only">
+              <div class="product-card">
+                <div class="product-card-thumbnail">
+                  <a href="#"><img src="https://placehold.it/180x180"/></a>
+                </div>
+                <h2 class="product-card-title">Album Name:</h2>
+                <span class="product-card-desc">Band Name:</span>
+                <span class="product-card-price">Your Rating:</span>           
+              </div>
+            </div>
+            <div class="column show-for-large">
+              <div class="product-card">
+                <div class="product-card-thumbnail">
+                  <a href="#"><img src="https://placehold.it/180x180"/></a>
+                </div>
+                <h2 class="product-card-title">Album Name:</h2>
+                <span class="product-card-desc">Band Name:</span>
+                <span class="product-card-price">Your Rating:</span>             
+              </div>
+            </div>
+            <div class="column show-for-large">
+              <div class="product-card">
+                <div class="product-card-thumbnail">
+                  <a href="#"><img src="https://placehold.it/180x180"/></a>
+                </div>
+                <h2 class="product-card-title">Album Name:</h2>
+                <span class="product-card-desc">Band Name:</span>
+                <span class="product-card-price">Your Rating:</span>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="is-active orbit-slide">
+          <div class="row small-up-2 medium-up-4 large-up-5 align-center">
+            <div class="column">
+              <div class="product-card">
+                <div class="product-card-thumbnail">
+                  <a href="#"><img src="https://placehold.it/180x180"/></a>
+                </div>
+                <h2 class="product-card-title">Album Name:</h2>
+                <span class="product-card-desc">Band Name:</span>
+                <span class="product-card-price">Your Rating:</span>        
+              </div>
+            </div>
+            <div class="column">
+              <div class="product-card">
+                <div class="product-card-thumbnail">
+                  <a href="#"><img src="https://placehold.it/180x180"/></a>
+                </div>
+                <h2 class="product-card-title">Album Name:</h2>
+                <span class="product-card-desc">Band Name:</span>
+                <span class="product-card-price">Your Rating:</span>
+              </div>
+            </div>
+            <div class="column hide-for-small-only">
+              <div class="product-card">
+                <div class="product-card-thumbnail">
+                  <a href="#"><img src="https://placehold.it/180x180"/></a>
+                </div>
+                <h2 class="product-card-title">Album Name:</h2>
+                <span class="product-card-desc">Band Name:</span>
+                <span class="product-card-price">Your Rating:</span>
+              </div>
+            </div>
+            <div class="column show-for-large">
+              <div class="product-card">
+                <div class="product-card-thumbnail">
+                  <a href="#"><img src="https://placehold.it/180x180"/></a>
+                </div>
+                <h2 class="product-card-title">Album Name:</h2>
+                <span class="product-card-desc">Band Name:</span>
+                <span class="product-card-price">Your Rating:</span>
+              </div>
+            </div>
+            <div class="column show-for-large">
+              <div class="product-card">
+                <div class="product-card-thumbnail">
+                  <a href="#"><img src="https://placehold.it/180x180"/></a>
+                </div>
+                <h2 class="product-card-title">Album Name:</h2>
+                <span class="product-card-desc">Band Name:</span>
+                <span class="product-card-price">Your Rating:</span>
+              </div>
+            </div>
+          </div>
+        </li>
+    </ul>
+      <nav class="orbit-bullets">
+        <button class="is-active" data-slide="0"><span class="show-for-sr">First slide details.</span><span class="show-for-sr">Current Slide</span></button>
+        <button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>
+      </nav>
+    </div>
+         -->
+      <!-- End Previous Listened & Listed from DB -->
+    <!-- Footer -->
+    <footer class="responsive-blog-footer" style="background-color: black;">
+      <div class="row">
+        <div class="medium-8 columns small-order-2 medium-order-1 about-container">
+          <div class="row">
+            <div class="medium-12 columns about-section">
+              <h4> About Us</h4>
+              <p>This is what happes when a group of software developing music snobs get together 
+              and we are not at all sorry about it.</p>
+    
+            </div>
+          </div>
+        </div>
+
+            <!-- Mailing List Form -->
+            <div class="small-12 medium-4 columns small-order-1 medium-order-2 mailing-container">
+              <form
+              action="https://formspree.io/xnqpqjzk"
+              method="POST">
+              <label>
+              <h4 class="mailing-list" style="color: white;font-weight: bold;">Join our mailing list for updates!</h4>
+              <input type="text" name="_replyto" placeholder="Email Address">
+              </label>
+              <button type="submit" class="button expanded subscribe-button">Subscribe Now! (you know you love us )</button>
+          </form>
+          </div>
+          <!-- Mailing List Form End -->
+      </div>
+
+  <!-- Scroll Up & Copyright -->
+      <div class="row columns flex-container align-justify">
+        <a href="#top"><i class="fa fa-chevron-circle-up" aria-hidden="true"></i></a>
+        <div>
+        <p style="float: right;"> &copy; Pigeonhole all rights reserved Made with <i class="fa fa-xs fa-heart" style="color:red "></i></p>
+      </div>
+      </div>
+    </footer>
+      <!-- Footer End -->
+    
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+      <!-- Custom Script file with minimal  -->
+<script src="./assets/js/script.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>

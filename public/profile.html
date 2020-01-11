@@ -1,0 +1,131 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pigeonhole - Your Profile</title>
+<link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+
+  <!-- font awesome link -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Custon Css Link -->
+<link href="./assets/css/style.css" rel="stylesheet" />
+
+  <!-- in head tag but after foundation.css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/motion-ui@1.2.3/dist/motion-ui.min.css" />
+
+</head>
+<body>
+
+  
+    <!-- Start Top Bar -->
+    <nav class="top-bar topbar-responsive top">
+      <div class="top-bar-title">
+        <span data-responsive-toggle="topbar-responsive" data-hide-for="medium">
+          <button class="menu-icon" type="button" data-toggle></button>
+        </span>
+      <div id="topbar-responsive" class="topbar-responsive-links">
+        <div class="top-bar-left">
+          <ul class="menu simple vertical medium-horizontal">
+            <li><img class="icon" src="./assets/images/banner.png" style="width: 180px;"></li>
+            <li>
+            </li>
+          </ul>
+        </div>
+<!-- Nav Links -->
+        <div class="top-bar-right">
+          <ul class="menu simple vertical medium-horizontal">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="https://github.com/libersword/album-ranker" target=”_blank”>Github Repo</a></li>
+            <li>
+              <li><a href="/profile">My Albums</a></li>
+              <li>
+              <button type="button" class="hollow button alert topbar-responsive-button">
+                <a href="/rank" style="margin-left: 2px; margin-right: 2px;">Rank New Album</a></button>
+            </li>
+          </ul>
+        </div>
+        </div>
+      </div>
+    </nav>
+    <!-- End Top Bar -->
+<br>
+
+<div class="row columns">
+<nav aria-label="You are here:" role="navigation">
+</ul>
+</nav>
+</div>
+
+<div class="album-container">
+  <h1>Albums</h1>
+  <div id ="album-table">
+  <table class="table table-bordered table-striped album-table" >
+    <thead>
+      <tr>
+        <th width = "150">Album Art</th>
+        <th width = "100" id="artistT">Artist</th>
+        <th width = "100">Album</th>
+        <th width = "50" >Overall Rating</thwidth = "150">
+        <th width = "50" id="scoreT">Album Score</th>
+        <th width = "250">Notes</thwidth = "150">
+        <th width = "50">Remove Album</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+</div>
+</div>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script>
+function sortTable(f,n){
+	var rows = $('.album-table tbody  tr').get();
+
+	rows.sort(function(a, b) {
+
+		var A = getVal(a);
+		var B = getVal(b);
+
+		if(A < B) {
+			return -1*f;
+		}
+		if(A > B) {
+			return 1*f;
+		}
+		return 0;
+	});
+
+	function getVal(elm){
+		var v = $(elm).children('td').eq(n).text().toUpperCase();
+		if($.isNumeric(v)){
+			v = parseInt(v,10);
+		}
+		return v;
+	}
+
+	$.each(rows, function(index, row) {
+		$('.album-table').children('tbody').append(row);
+	});
+}
+var f_sl = 1;
+var f_nm = 1;
+$("#scoreT").click(function(){
+    f_sl *= -1;
+    var n = $(this).prevAll().length;
+    sortTable(f_sl,n);
+});
+$("#artistT").click(function(){
+    f_nm *= -1;
+    var n = $(this).prevAll().length;
+    sortTable(f_nm,n);
+});
+
+</script>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src = "./assets/js/album-input.js"></script>
+</body>
+</html>
