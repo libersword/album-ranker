@@ -17,8 +17,8 @@ app.post("/api", function (req, res) {
   const album = req.body.album;
 
   var spotify = new Spotify({
-    id: process.env.SPOTIFY_ID,
-    secret: process.env.SPOTIFY_SECRET
+    id: '3b6b2f5b8750435aa00914af973df039',
+    secret: 'c4115860357d47c4a65cfb081f4596e6'
   });
 
   //search by album
